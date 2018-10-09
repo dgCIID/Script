@@ -20,16 +20,6 @@ foreach($servers as $sv) {
 $sql = substr($sql, 0, -4);
 echo  "SELECT DISTINCT `sys_datalog`.`server_id` , MAX( `sys_datalog`.`datalog_id` ) FROM  `sys_datalog` WHERE " . $sql ." LIMIT 10;";
 
-//$result = $conn->query($sql);
-
-//if ($result->num_rows > 0) {
-    // output data of each row
- //   while($row = $result->fetch_assoc()) {
-  //      echo "id: " . $row["server_id"]. " - Name: " . $row["updated"]. "<br>";
-  //  }
-//} else {
-//    echo "0 results";
-//}
 $conn->close();
 
 ?>
